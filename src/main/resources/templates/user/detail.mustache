@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{{> /layout/header}}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>에러페이지</title>
-    <style>
-        .red_color {
-            color: red;
-        }
-    </style>
-</head>
+<!-- 컨테이너 시작 -->
+<div class="container mt-3">
 
-<body>
-    <h1 class="red_color">잘못된 페이지를 요청하였습니다.</h1>
-    <hr />
-    <a href="/">메인으로 가기</a>
-</body>
+    <!-- 상세정보보기 시작 -->
 
-</html>
+    <div class="mb-3 mt-3">
+        {{user.username}}
+    </div>
+    <div class="mb-3">
+        {{user.password}}
+    </div>
+    <div class="mb-3">
+        {{user.email}}
+    </div>
+    <a href="/user/updateForm" class="btn btn-dark">수정 페이지이동</a>
+
+    <!-- 상세정보보기 끝 -->
+
+</div>
+<!-- 컨테이너 끝 -->
+
+{{> /layout/footer}}
